@@ -90,24 +90,25 @@ def sign_in(uid, pwd):
     return True
 
 #随机时间
-def randomTime(seconds=3600):
-    randomnumber = random.randint(0, seconds)
-    counter = 0
-    while counter < randomnumber:
-        restTime = randomnumber - counter
-        restMinutes = int(restTime / 60)
-        restSeconds = restTime % 60
-        if restTime < 300:
-            if restTime < 60:
-                print("倒计时: "+ str(restSeconds) + "秒")
-            else:
-                print("倒计时: " + str(restMinutes) + "分" + str(restSeconds) + "秒")
-            time.sleep(restTime)
-            counter += restTime
-        else:
-            print("倒计时: " + str(restMinutes) + "分" + str(restSeconds) + "秒")
-            time.sleep(300)
-            counter += 300
+
+#def randomTime(seconds=3600):
+ #   randomnumber = random.randint(0, seconds)
+ #   counter = 0
+ #   while counter < randomnumber:
+ #       restTime = randomnumber - counter
+  #      restMinutes = int(restTime / 60)
+   #     restSeconds = restTime % 60
+   #     if restTime < 300:
+  #          if restTime < 60:
+  #              print("倒计时: "+ str(restSeconds) + "秒")
+  #          else:
+   #             print("倒计时: " + str(restMinutes) + "分" + str(restSeconds) + "秒")
+  #          time.sleep(restTime)
+  #          counter += restTime
+  #      else:
+  #          print("倒计时: " + str(restMinutes) + "分" + str(restSeconds) + "秒")
+  #          time.sleep(300)
+ #           counter += 300
 
 if __name__ == "__main__":
 	#检查账号密码数量是否一致
@@ -122,10 +123,10 @@ if __name__ == "__main__":
         print("账号和密码数量不一致\n");
         exit(1)
     #随机时间
-    if RNDTM:
-        randomTime(int(RNDTM)*60)
-    else:
-        randomTime(3600)
+#    if RNDTM:
+#        randomTime(int(RNDTM)*60)
+#    else:
+#        randomTime(3600)
     #开始打卡
     for i in range(pwd_length):
         print("**************************************\n正在给第 "+str(i+1)+" 个账号打卡")
